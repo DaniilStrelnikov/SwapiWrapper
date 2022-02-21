@@ -3,25 +3,24 @@
 Simple wrapper for swapi
 
 **How to install**
-```npm i swapi-ts-wrapper```
-
+`npm i swapi-ts-wrapper`
 
 ## Methods
 
-```getPerson(id, search, isWookiee)```
-```getFilm(id, search, isWookiee)```
-```getPlanet(id, search, isWookiee)```
-```getSpecies(id, search, isWookiee)```
-```getStarship(id, search, isWookiee)```
-```getVehicle(id, search, isWookiee)```
+`getPerson(id, search, isWookiee)`\
+`getFilm(id, search, isWookiee)`\
+`getPlanet(id, search, isWookiee)`\
+`getSpecies(id, search, isWookiee)`\
+`getStarship(id, search, isWookiee)`\
+`getVehicle(id, search, isWookiee)`\
 
 ## Usage
 
     import  Swapi  from  'swapi-ts-wrapper'
-    
+
     Swapi.getSpecies().then(data  =>  console.log(data))
 
-returns 
+returns
 
     {
       count: 37,
@@ -52,7 +51,7 @@ returns
 You can simply add an id and search by id
 
     Swapi.getSpecies(1).then(data  =>  console.log(data))
-    
+
 Also you can search by search filter
 
     Swapi.getPerson(undefined, 'Vader').then(data  =>  console.log(data))
