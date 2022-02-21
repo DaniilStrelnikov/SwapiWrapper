@@ -1,10 +1,10 @@
 {
-  "name": "nanoramik",
+  "name": "swapi-ts-wrapper",
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "tsc && node index.js",
     "test": "node index"
   },
   "type": "module",

@@ -25,11 +25,11 @@ const getQuery = ({ query, isWookiee, search, id }) => __awaiter(void 0, void 0,
         format: isWookiee ? 'wookiee' : undefined,
         search,
     };
-    swapi.get(_query, {
+    return swapi.get(_query, {
         params,
-    }).then(data => console.log(data.data));
+    }).then(data => data.data);
 });
-export const Swapi = {
+export default {
     getPerson: (id, search, isWookiee) => getQuery({ query: Queries.people, id, isWookiee, search }),
     getFilm: (id, search, isWookiee) => getQuery({ query: Queries.films, id, search, isWookiee }),
     getPlanet: (id, search, isWookiee) => getQuery({ query: Queries.planets, id, search, isWookiee }),
@@ -43,5 +43,4 @@ export const Swapi = {
     getStarships: (search, isWookiee) => getQuery({ query: Queries.starships, search, isWookiee }),
     getVehicles: (search, isWookiee) => getQuery({ query: Queries.vehicles, search, isWookiee }),
 };
-Swapi.getFilms();
 //# sourceMappingURL=app.js.map

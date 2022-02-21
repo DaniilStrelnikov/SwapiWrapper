@@ -21,12 +21,12 @@ const getQuery = async ({query, isWookiee, search, id}: GetQueryProps) => {
     search,
   }
 
-  swapi.get(_query, {
+  return swapi.get(_query, {
    params,
-  }).then(data => console.log(data.data))
+  }).then(data => data.data);
 }
 
-export const Swapi = {
+export default {
   getPerson: (id?: number, search?: string, isWookiee?: boolean) => getQuery({query: Queries.people, id, isWookiee, search}),
   getFilm: (id?: number, search?: string, isWookiee?: boolean) => getQuery({query: Queries.films, id, search, isWookiee}),
   getPlanet: (id?: number, search?: string, isWookiee?: boolean) => getQuery({query: Queries.planets, id, search, isWookiee}),
@@ -41,5 +41,3 @@ export const Swapi = {
   getStarships: (search?: string, isWookiee?: boolean) => getQuery({query: Queries.starships, search, isWookiee}),
   getVehicles: (search?: string, isWookiee?: boolean) => getQuery({query: Queries.vehicles, search, isWookiee}),
 }
-
-Swapi.getFilms()
